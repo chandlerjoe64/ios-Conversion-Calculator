@@ -39,16 +39,16 @@ class ConversionCalculatorViewController: UIViewController {
         //action sheet options
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let f_c = UIAlertAction(title: "fahrenheit to celcius", style: .default) { action in
-            //code
+            self.activate_f_c()
         }
         let c_f = UIAlertAction(title: "celcius to fahrenheit", style: .default) { action in
-            //code
+            self.activate_c_f()
         }
         let m_k = UIAlertAction(title: "miles to kilometers", style: .default) { action in
-            //code
+            self.activate_m_k()
         }
         let k_m = UIAlertAction(title: "kilometers to miles", style: .default) { action in
-            //code
+            self.activate_k_m()
         }
         
         //add action sheet options to action sheet
@@ -61,6 +61,27 @@ class ConversionCalculatorViewController: UIViewController {
         //present action sheet
         present(actionSheet, animated: true, completion: nil)
         
+    }
+    
+    //functions to activate the various converters
+    func activate_f_c() {
+        inputDisplay.text = "°F"
+        outputDisplay.text = "°C"
+    }
+    
+    func activate_c_f() {
+        inputDisplay.text = "°C"
+        outputDisplay.text = "°F"
+    }
+    
+    func activate_m_k() {
+        inputDisplay.text = "mi"
+        outputDisplay.text = "km"
+    }
+    
+    func activate_k_m() {
+        inputDisplay.text = "km"
+        outputDisplay.text = "mi"
     }
     /*
     // MARK: - Navigation
